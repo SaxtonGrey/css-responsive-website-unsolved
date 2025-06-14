@@ -5,13 +5,242 @@
 */
 
 @media (min-width: 1024px) {
-  /* .top-navigation .trigram {
+  /* Hide hamburger menu on desktop */
+  .top-navigation .trigram {
     display: none;
-  } */
+  }
+
+  /* Desktop hover effects for navigation */
+  .top-navigation ul li a:hover {
+    color: #1f1f1f;
+    transition: color 0.3s ease;
+  }
+
+  /* Desktop hover effects for teammate social icons */
+  .teammate-social-icons > div:hover {
+    background-color: #969696;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Desktop hover effects for footer social icons */
+  footer .social-icons div:hover {
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  footer .social-icons div:hover .icon {
+    background-color: #969696;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Desktop hover effects for footer links */
+  footer .footer-contacts ul li a:hover {
+    color: white;
+    transition: color 0.3s ease;
+  }
 
   /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
+@media (max-width: 1023px) {
+  /* Hide desktop navigation menu */
+  .top-navigation ul {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+  .top-navigation .trigram {
+    display: block;
+  }
+
+  /* Adjust content padding */
+  .content {
+    padding: 0 20px;
+  }
+
+  .header-content {
+    padding: 0 20px;
+  }
+
+  /* Adjust heading and text sizes */
+  .content h1 {
+    font-size: 48px;
+    padding: 0 20px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p.subtext {
+    padding: 0 20px;
+  }
+
+  /* Portfolio section adjustments */
+  .portfolio-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .portfolio-img-wrapper {
+    flex-shrink: 0;
+    width: 200px;
+  }
+
+  .portfolio-item-info {
+    flex: 1;
+  }
+
+  /* Team section adjustments */
+  .teammates-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .teammates-list:before,
+  .teammates-list:after {
+    display: none;
+  }
+
+  .teammates-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .teammate {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .teammate-img-wrapper {
+    width: 100%;
+  }
+
+  /* Footer adjustments */
+  footer .social-icons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  footer .social-icons div {
+    width: auto;
+    justify-content: center;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .footer-contacts > div {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+@media (max-width: 767px) {
+  /* Further reduce content padding for mobile */
+  .content {
+    padding: 0 15px;
+  }
+
+  .header-content {
+    padding: 0 15px;
+  }
+
+  /* Mobile typography adjustments */
+  .content h1 {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p.subtext {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  /* Mobile portfolio adjustments */
+  .portfolio-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio-img-wrapper {
+    width: 100%;
+  }
+
+  /* Mobile team section - single column */
+  .teammates-list-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .teammate {
+    text-align: center;
+  }
+
+  .teammate-img-wrapper {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  /* Mobile footer adjustments */
+  .footer-content {
+    gap: 40px;
+  }
+
+  footer .social-icons {
+    gap: 15px;
+  }
+
+  footer .social-icons div {
+    font-size: 12px;
+  }
+
+  footer .social-icons .icon {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .footer-contacts {
+    gap: 30px;
+  }
+
+  .footer-contacts > div {
+    max-width: 250px;
+  }
+
+  .footer-contacts h3 {
+    font-size: 12px;
+  }
+
+  .footer-contacts p,
+  .footer-contacts ul li a {
+    font-size: 14px;
+  }
+
+  .footer-footer {
+    font-size: 11px;
+  }
+}
